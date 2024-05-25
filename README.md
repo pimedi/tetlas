@@ -6,7 +6,7 @@
 
 This code is intended for novice developers to play alone.
 Therefore, it is incomplete and defective.
-I watched the video of YouTube "DMTpark" and produced it with the help of GPT.
+I watched the video of YouTube "DMTpark" and produced it with the help of GPT. #mytetration
 
 ## Welcome to TETLAS !
 
