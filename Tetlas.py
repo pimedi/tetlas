@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     # 프레임 범위 설정
     start_frame = 1  # 시작 프레임
-    end_frame = 1080  # 종료 프레임
+    end_frame = 240  # 종료 프레임
 
     # 초기 프레임 설정 (줌 전 프레임들)
     for frame in range(start_frame - 1):
