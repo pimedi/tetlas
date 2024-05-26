@@ -1,7 +1,12 @@
 import cv2
 import os
 import re
-import Tetlas
+
+# 현재 작업 디렉토리 저장
+current_path = os.path.dirname(os.path.abspath(__file__))
+print(f"현재 디렉토리: {current_path}")
+
+
 def natural_sort_key(s):
     return [int(text) if text.isdigit() else text.lower() for text in re.split('(\d+)', s)]
 
@@ -15,7 +20,7 @@ def images_to_video(image_folder, output_video, fps):
             raise ValueError("No images found in the folder")
 
         # Read the first image to get dimensions
-        first_image_path = os.path.join(image_folder, images[0])
+        first_image_path = os.path.join(current_path, image_folder, images[0])
         frame = cv2.imread(first_image_path)
         if frame is None:
             raise ValueError(f"Could not read the first image: {first_image_path}")
@@ -44,15 +49,12 @@ def images_to_video(image_folder, output_video, fps):
 ######################################################################################################
 
 
-    # 현재 작업 디렉토리 저장
-    current_path = os.getcwd()
-    print(f"현재 작업 디렉토리: {current_path}")
 
+###이미지 폴더 이름을 붙여넣기 하세요. Copy and paste the image folder name.
+image_folder = os.path.join(current_path, 'Tetlas_-0.9371381382814938_-3.5086305438969156') 
+output_video = 'Tetlas_-0.9371381382814938_-3.5086305438969156.mp4'  # 출력할 동영상 파일 이름
 
-    # 폴더 경로를 이미지 파일들이 있는 폴더로 설정
-    image_folder = os.path.join(current_path, 'Tetlas_-0.9371381382814938_-3.5086305438969156') 
-    output_video = 'Tetlas_-0.9371381382814938_-3.5086305438969156.mp4'  # 출력할 동영상 파일 이름
-    fps = 30  # 초당 프레임 수 (fps로 설정)
-
-    # Convert images to video
-    images_to_video(image_folder, output_video, fps)
+fps = 30  # 초당 프레임 수 (fps 설정)
+    
+# Convert images to video
+images_to_video(image_folder, output_video, fps)
