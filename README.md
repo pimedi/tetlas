@@ -10,11 +10,13 @@ python으로 Tetlas.py를 실행하면 됩니다. NVIDIA 기준입니다.
 
 This code is intended for novice developers to play alone.
 Therefore, it is incomplete and defective.
+
 I watched the video of YouTube "DMTpark" and produced it with the help of GPT. #mytetration
 
 ## Welcome to TETLAS !
 
 미지의 대륙 "Tetlas"로의 여행.
+
 A Journey to the Uncharted World "Tetlas".
 
 
