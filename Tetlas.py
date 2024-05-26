@@ -180,13 +180,13 @@ if __name__ == '__main__':
 
     #####target####
 
-    px_target, py_target = 1e-1, 0.0
+    px_target, py_target = cp.exp(cp.exp(-1)),0.0
     logging.info(f"target: ({px_target}) , ({py_target})")
     scale_initial = 5
     zoom_factor = 0.9
-    nx, ny = 1200, 1200
+    nx, ny = 1440, 1440
     max_iter = 500
-    escape_radius = 1e+10
+    escape_radius = 1e+11
 
     results_folder = f"results_{nx}x{ny}/Tetlas_{px_target}_{py_target}"
     output_folder = os.path.join(current_path, results_folder)
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     ]
 
     start_frame = 1
-    end_frame = 20
+    end_frame = 120
 
     args = [(frame, px, py, px_target, py_target, scale_initial, zoom_factor, nx, ny, max_iter, escape_radius,
              output_folder, custom_colors, color_positions) for frame in range(start_frame, end_frame + 1)]
