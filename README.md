@@ -1,10 +1,7 @@
-## 구현 영상
 
-<iframe width="408" height="377" src="https://www.youtube.com/embed/gmo3r5O6ox4" title="나는 떡을 썰테니 너는 그림을 그려라" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## 구현 예시 Example
 
-## 이미지 예시
-
-![이미지](example.png)
+[![예시(example.png)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=gmo3r5O6ox4))
 
 
 ## 주의 ! Warning !
