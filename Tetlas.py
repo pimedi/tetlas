@@ -11,6 +11,11 @@ from dask.distributed import Client, LocalCluster, progress
 from tqdm import tqdm
 import gc
 
+# 현재 작업 디렉토리 저장
+current_path = os.path.dirname(os.path.abspath(__file__))
+print(f"현재 디렉토리: {current_path}")
+
+
 ASPECT_RATIO = 9 / 16
 
 def compute_tetration_step(c, z, escape_radius):
@@ -76,6 +81,9 @@ def create_folder_if_not_exists(folder_path):
         print(f"이 폴더에 저장할게요: {folder_path}")
 
 if __name__ == '__main__':
+    
+    
+    
     #################################
     ######### 초기 설정##############
     #################################
@@ -91,10 +99,6 @@ if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    # 현재 작업 디렉토리 저장
-    current_path = os.getcwd()
-    print(f"현재 작업 디렉토리: {current_path}")
-
     # 원하는 폴더 경로 설정 (현재 작업 디렉토리를 기준으로 상대 경로를 사용)
     results_folder = f"results_{nx}x{ny}/Tetlas_{px_target}_{py_target}"
     output_folder = os.path.join(current_path, results_folder)
@@ -105,10 +109,17 @@ if __name__ == '__main__':
     # 커스텀 컬러맵 생성
     cmap = create_custom_colormap()
 
-    # 프레임 범위 설정
+    #################################
+    # 프레임 범위 설정##############
+    #################################
+    
     start_frame = 1  # 시작 프레임
-    end_frame = 121  # 종료 프레임(설정값 -1에서 끝남)
+    end_frame = 120  # 종료 프레임
 
+    #################################
+    ##################################
+    
+    
     # 초기 프레임 설정 (줌 전 프레임들)
     for frame in range(start_frame - 1):
         scale = scale_initial * (zoom_factor ** frame)
