@@ -80,7 +80,7 @@ if __name__ == '__main__':
     #################################
     
     px, py = 0, 0  # 시작 중심
-    px_target, py_target= np.random.randint(-5, 5),np.random.randint(-5, 5)  # 줌 타겟 중심
+    px_target, py_target= np.random.uniform(-1.0, 1.0),np.random.uniform(-1.0, 1.0)  # 줌 타겟 중심
     scale_initial = 5  # 초기 스케일
     zoom_factor = 0.98  # 프레임 당 스케일 축소 비율
     nx, ny = 1920, 1080
