@@ -43,9 +43,16 @@ def images_to_video(image_folder, output_video, fps):
 ################### 설정 Parameters###################################################################
 ######################################################################################################
 
-image_folder = 'Tetlas_{Tetlas.px_target},{Tetlas.py_target}'  # 폴더 경로를 이미지 파일들이 있는 폴더로 설정
-output_video = 'Tetlas_{Tetlas.px_target},{Tetlas.py_target}.mp4'  # 출력할 동영상 파일 이름
-fps = 30  # 초당 프레임 수 (fps로 설정)
 
-# Convert images to video
-images_to_video(image_folder, output_video, fps)
+    # 현재 작업 디렉토리 저장
+    current_path = os.getcwd()
+    print(f"현재 작업 디렉토리: {current_path}")
+
+
+    # 폴더 경로를 이미지 파일들이 있는 폴더로 설정
+    image_folder = os.path.join(current_path, 'Tetlas_-0.9371381382814938_-3.5086305438969156') 
+    output_video = 'Tetlas_-0.9371381382814938_-3.5086305438969156.mp4'  # 출력할 동영상 파일 이름
+    fps = 30  # 초당 프레임 수 (fps로 설정)
+
+    # Convert images to video
+    images_to_video(image_folder, output_video, fps)
