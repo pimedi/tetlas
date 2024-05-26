@@ -1,7 +1,7 @@
 
 ## 구현 예시 Example
 
-![예시(example.png)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=gmo3r5O6ox4))
+[![예시(example.png)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=gmo3r5O6ox4])
 
 
 ## 주의 ! Warning !
